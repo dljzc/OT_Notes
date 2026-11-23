@@ -16,31 +16,53 @@ a.card strong{display:block;color:#58a6ff;font-size:.95em}
 a.card span{font-size:.85em;color:#8b949e}
 .btn-back{display:inline-block;margin-top:32px;color:#58a6ff;text-decoration:none}
 .btn-back:hover{text-decoration:underline}
+.lang-switch{display:inline-block;margin-bottom:16px}
+.lang-switch select{padding:4px 8px;font-size:14px;border-radius:4px;background:#161b22;color:#c9d1d9;border:1px solid #30363d}
+.lang-switch select:focus{outline:none;border-color:#58a6ff}
 </style>
 </head>
 <body>
 <div class="container">
-<h1>📦 工业软件笔记</h1>
+<div class="lang-switch">
+<select id="lang-select" onchange="switchLang(this.value)">
+<option value="zh-CN">中文</option>
+<option value="en-US">English</option>
+</select>
+</div>
+<h1 data-zh="📦 工业软件笔记" data-en="📦 Industrial Software Notes">📦 工业软件笔记</h1>
 
-<h2>数据平台</h2>
+<h2 data-zh="数据平台" data-en="Data Platform">数据平台</h2>
 <div class="nav-grid">
-<a class="card" href="aveva-pi.html"><strong>AVEVA PI</strong><span>AF SDK 直连、实时/历史值、事件框架、PI Vision</span></a>
-<a class="card" href="pi-jdbc-batch.html"><strong>PI JDBC Batch</strong><span>JDBC 批量灌数、NO FLUSH 优化、237→10309 eps</span></a>
-<a class="card" href="pi-mqtt-sparkplug.html"><strong>PI MQTT Sparkplug</strong><span>MQTT→PI 单向采集、DCM 管理、七步配置</span></a>
+<a class="card" href="aveva-pi.html" data-zh="AVEVA PI" data-en="AVEVA PI"><strong>AVEVA PI</strong><span>AF SDK 直连、实时/历史值、事件框架、PI Vision</span></a>
+<a class="card" href="pi-jdbc-batch.html" data-zh="PI JDBC Batch" data-en="PI JDBC Batch"><strong>PI JDBC Batch</strong><span>JDBC 批量灌数、NO FLUSH 优化、237→10309 eps</span></a>
+<a class="card" href="pi-mqtt-sparkplug.html" data-zh="PI MQTT Sparkplug" data-en="PI MQTT Sparkplug"><strong>PI MQTT Sparkplug</strong><span>MQTT→PI 单向采集、DCM 管理、七步配置</span></a>
 </div>
 
-<h2>OPC 服务器</h2>
+<h2 data-zh="OPC 服务器" data-en="OPC Server">OPC 服务器</h2>
 <div class="nav-grid">
-<a class="card" href="kepware.html"><strong>Kepware</strong><span>KEPServerEX / IoT Platform、COM/REST 控制</span></a>
+<a class="card" href="kepware.html" data-zh="Kepware" data-en="Kepware"><strong>Kepware</strong><span>KEPServerEX / IoT Platform、COM/REST 控制</span></a>
 </div>
 
-<h2>PLC 编程</h2>
+<h2 data-zh="PLC 编程" data-en="PLC Programming">PLC 编程</h2>
 <div class="nav-grid">
-<a class="card" href="#"><strong>TIA Portal</strong><span>西门子博途，S7-1200/1500（待补充）</span></a>
-<a class="card" href="#"><strong>Studio 5000</strong><span>罗克韦尔，ControlLogix（待补充）</span></a>
+<a class="card" href="#" data-zh="TIA Portal" data-en="TIA Portal"><strong>TIA Portal</strong><span>西门子博途，S7-1200/1500（待补充）</span></a>
+<a class="card" href="#" data-zh="Studio 5000" data-en="Studio 5000"><strong>Studio 5000</strong><span>罗克韦尔，ControlLogix（待补充）</span></a>
 </div>
 
-<a class="btn-back" href="/">← 返回主页</a>
+<a class="btn-back" href="/" data-zh="返回主页" data-en="Return to Home">← 返回主页</a>
 </div>
+
+<script>
+let currentLang = 'zh-CN';
+
+function switchLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  const els = document.querySelectorAll('[data-zh][data-en]');
+  for (const el of els) {
+    el.textContent = el.getAttribute('data-' + lang);
+  }
+}
+</script>
 </body>
 </html>

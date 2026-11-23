@@ -17,34 +17,56 @@ a.card:hover{border-color:#58a6ff}
 a.card strong{display:block;color:#58a6ff;font-size:.95em}
 a.card span{font-size:.85em;color:#8b949e}
 .note{background:#1c2128;border-left:3px solid #30363d;padding:12px 16px;border-radius:4px;font-size:.9em;color:#8b949e;margin-top:20px}
+.lang-switch{display:inline-block;margin-bottom:16px}
+.lang-switch select{padding:4px 8px;font-size:14px;border-radius:4px;background:#161b22;color:#c9d1d9;border:1px solid #30363d}
+.lang-switch select:focus{outline:none;border-color:#58a6ff}
 </style>
 </head>
 <body>
 <div class="container">
-<h1>OT 工程师笔记</h1>
-<p class="subtitle">个人 OT 知识库：笔记、软件、协议、安全、工具、AI Skills</p>
+<div class="lang-switch">
+<select id="lang-select" onchange="switchLang(this.value)">
+<option value="zh-CN">中文</option>
+<option value="en-US">English</option>
+</select>
+</div>
+<h1 data-zh="OT 工程师笔记" data-en="OT Engineer Notes">OT 工程师笔记</h1>
+<p class="subtitle" data-zh="个人 OT 知识库：笔记、软件、协议、安全、工具、AI Skills" data-en="Personal OT Knowledge Base: Notes, Software, Protocols, Security, Tools, AI Skills">个人 OT 知识库：笔记、软件、协议、安全、工具、AI Skills</p>
 
-<h2>📚 知识库</h2>
+<h2 data-zh="📚 知识库" data-en="📚 Knowledge Base">📚 知识库</h2>
 <div class="nav-grid">
-<a class="card" href="software/"><strong>工业软件</strong><span>SCADA / DCS / PLC / CAD 配置与故障排查</span></a>
-<a class="card" href="protocols/"><strong>工业协议</strong><span>Modbus / DNP3 / OPC UA 报文分析</span></a>
-<a class="card" href="security/"><strong>安全实践</strong><span>OT 加固、威胁检测、事件响应</span></a>
-<a class="card" href="tools/"><strong>工程工具</strong><span>测试与分析工具使用笔记</span></a>
-<a class="card" href="docs/ai/skills/"><strong>AI Skills</strong><span>可复用的工程 AI 提示词模板</span></a>
+<a class="card" href="software/" data-zh="工业软件" data-en="Industrial Software"><strong>工业软件</strong><span>SCADA / DCS / PLC / CAD 配置与故障排查</span></a>
+<a class="card" href="protocols/" data-zh="工业协议" data-en="Industrial Protocols"><strong>工业协议</strong><span>Modbus / DNP3 / OPC UA 报文分析</span></a>
+<a class="card" href="security/" data-zh="安全实践" data-en="Security Practices"><strong>安全实践</strong><span>OT 加固、威胁检测、事件响应</span></a>
+<a class="card" href="tools/" data-zh="工程工具" data-en="Engineering Tools"><strong>工程工具</strong><span>测试与分析工具使用笔记</span></a>
+<a class="card" href="docs/ai/skills/" data-zh="AI Skills" data-en="AI Skills"><strong>AI Skills</strong><span>可复用的工程 AI 提示词模板</span></a>
 </div>
 
-<h2>🧪 实践与项目</h2>
+<h2 data-zh="🧪 实践与项目" data-en="🧪 Practice and Projects">🧪 实践与项目</h2>
 <div class="nav-grid">
-<a class="card" href="projects/"><strong>项目清单</strong><span>工程脚本与工具</span></a>
-<a class="card" href="experiments/"><strong>实验记录</strong><span>按时间顺序的尝试与复盘</span></a>
+<a class="card" href="projects/" data-zh="项目清单" data-en="Project List"><strong>项目清单</strong><span>工程脚本与工具</span></a>
+<a class="card" href="experiments/" data-zh="实验记录" data-en="Experiment Records"><strong>实验记录</strong><span>按时间顺序的尝试与复盘</span></a>
 </div>
 
-<h2>🚀 源码</h2>
+<h2 data-zh="🚀 源码" data-en="🚀 Source Code">🚀 源码</h2>
 <div class="nav-grid">
-<a class="card" href="https://github.com/dljzc/OT_Notes"><strong>GitHub 仓库</strong><span>查看完整源码和提交历史</span></a>
+<a class="card" href="https://github.com/dljzc/OT_Notes" data-zh="GitHub 仓库" data-en="GitHub Repository"><strong>GitHub 仓库</strong><span>查看完整源码和提交历史</span></a>
 </div>
 
-<p class="note">⚠️ 仓库内容为私有，仅用于个人记录与学习笔记。</p>
+<p class="note" data-zh="仓库内容为私有，仅用于个人记录与学习笔记。" data-en="Repository content is private, for personal notes and learning only.">仓库内容为私有，仅用于个人记录与学习笔记。</p>
 </div>
+
+<script>
+let currentLang = 'zh-CN';
+
+function switchLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  const els = document.querySelectorAll('[data-zh][data-en]');
+  for (const el of els) {
+    el.textContent = el.getAttribute('data-' + lang);
+  }
+}
+</script>
 </body>
 </html>
