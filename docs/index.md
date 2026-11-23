@@ -1,24 +1,25 @@
 ---
 layout: default
-title: 文档索引
+title: OT 工程师档案
 ---
 
-# 文档索引
+# OT 工程师档案
 
-## AI 知识库
+## 知识库
 | 目录 | 内容 |
 |---|---|
-| [docs/ai/prompts/](ai/prompts/) | 提示词模板 |
-| [docs/ai/models/](ai/models/) | 模型对比、配置笔记 |
-| [docs/ai/patterns/](ai/patterns/) | 工作流（RAG、Agent 等） |
+| [notes/](../notes/) | 日常笔记、工程现场记录 |
+| [software/](../software/) | 工业软件（SCADA/DCS/PLC/CAD） |
+| [protocols/](../protocols/) | 工业协议分析（Modbus/DNP3/OPC UA） |
+| [security/](../security/) | OT 安全实践 |
+| [tools/](../tools/) | 工程工具链（EPLAN/Simulation/Analysis） |
 
-## 安全与测试
+## 项目
 | 目录 | 内容 |
 |---|---|
-| [docs/security/](security/) | 测试原则、边界记录 |
+| [projects/](projects/) | 工程脚本和工具 |
 
-## 项目与实验
+## 实验
 | 目录 | 内容 |
 |---|---|
-| [projects/](../../projects/) | 可复用工具 |
-| [experiments/](../../experiments/) | 实验记录 |
+| [experiments/](experiments/) | 实验记录 |
