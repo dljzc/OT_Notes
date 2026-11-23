@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工程工具 - OT 工程师笔记</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6}
+.container{max-width:820px;margin:0 auto;padding:48px 24px}
+h1{font-size:2em;margin-bottom:24px;color:#58a6ff}
+.nav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:16px 0}
+a.card{display:block;background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px 16px;text-decoration:none;color:#c9d1d9;transition:border-color .15s}
+a.card:hover{border-color:#58a6ff}
+a.card strong{display:block;color:#58a6ff;font-size:.95em}
+a.card span{font-size:.85em;color:#8b949e}
+.btn-back{display:inline-block;margin-top:32px;color:#58a6ff;text-decoration:none}
+.btn-back:hover{text-decoration:underline}
+.lang-switch{display:inline-block;margin-bottom:16px}
+.lang-switch select{padding:4px 8px;font-size:14px;border-radius:4px;background:#161b22;color:#c9d1d9;border:1px solid #30363d}
+.lang-switch select:focus{outline:none;border-color:#58a6ff}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="lang-switch">
+<select id="lang-select" onchange="switchLang(this.value)">
+<option value="zh-CN">中文</option>
+<option value="en-US">English</option>
+</select>
+</div>
+<h1 data-zh="🛠 工程工具笔记" data-en="🛠 Engineering Tools Notes">🛠 工程工具笔记</h1>
+
+<h2 data-zh="扫描与探测" data-en="Scanning & Discovery">扫描与探测</h2>
+<div class="nav-grid">
+<a class="card" href="#" data-zh="Nmap" data-en="Nmap"><strong>Nmap</strong><span>端口扫描，服务识别，OS 指纹</span></a>
+<a class="card" href="#" data-zh="Masscan" data-en="Masscan"><strong>Masscan</strong><span>快速端口扫描，内网扫描</span></a>
+<a class="card" href="#" data-zh="FFUF" data-en="FFUF"><strong>FFUF</strong><span>目录爆破，参数 fuzz</span></a>
+</div>
+
+<h2 data-zh="脚本与自动化" data-en="Scripting & Automation">脚本与自动化</h2>
+<div class="nav-grid">
+<a class="card" href="#" data-zh="PowerShell" data-en="PowerShell"><strong>PowerShell</strong><span>Windows 自动化，AF SDK，PI 数据</span></a>
+<a class="card" href="#" data-zh="Python" data-en="Python"><strong>Python</strong><span>跨平台脚本，PI JDBC，数据处理</span></a>
+<a class="card" href="#" data-zh="Bash" data-en="Bash"><strong>Bash</strong><span>Linux 自动化，命令行工具</span></a>
+</div>
+
+<h2 data-zh="网络分析" data-en="Network Analysis">网络分析</h2>
+<div class="nav-grid">
+<a class="card" href="#" data-zh="Wireshark" data-en="Wireshark"><strong>Wireshark</strong><span>协议分析，包捕获，过滤</span></a>
+<a class="card" href="#" data-zh="tcpdump" data-en="tcpdump"><strong>tcpdump</strong><span>命令行包捕获，脚本集成</span></a>
+<a class="card" href="#" data-zh="Nuclei" data-en="Nuclei"><strong>Nuclei</strong><span>漏洞扫描，模板驱动</span></a>
+</div>
+
+<a class="btn-back" href="/" data-zh="返回主页" data-en="Return to Home">← 返回主页</a>
+</div>
+
+<script>
+let currentLang = 'zh-CN';
+
+function switchLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  const els = document.querySelectorAll('[data-zh][data-en]');
+  for (const el of els) {
+    el.textContent = el.getAttribute('data-' + lang);
+  }
+}
+</script>
+</body>
+</html>
