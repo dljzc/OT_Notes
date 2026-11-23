@@ -1,0 +1,27 @@
+# 敏感文件
+.env
+*.pem
+*.key
+credentials.*
+
+# 本地编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 依赖
+dist/
+node_modules/
+venv/
+__pycache__/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 大文件（如需）
+# *.zip
+# *.tar.gz
+# assets/models/

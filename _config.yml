@@ -1,0 +1,12 @@
+title: 个人 AI 档案
+description: 个人 AI 知识库与实验档案
+theme: minima
+collection_dir: docs
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+default:
+  relative_links:
+    collection: docs
+    inclusive: true
