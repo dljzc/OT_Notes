@@ -12,6 +12,11 @@ title: 工业软件
 | [Ignition](ignition.md) | SCADA/Edge | 透视平台、边缘计算、MQTT |
 | [Highbyte](highbyte.md) | IIoT 平台 | 边缘到云连接、资产模型、数据管道 |
 | [Canary](canary.md) | 工业数据枢纽 | 工业数据集成、MCP 服务 |
+
+## OPC 服务器
+| 软件 | 类型 | 说明 |
+|---|---|---|
+| [Kepware](kepware.md) | OPC 服务器 | KEPServerEX / IoT Platform，OPC DA/UA/Modbus |
 | [Kapware](kapware.md) | 工业连接 | OPC 服务器、PLC 连接、边缘数据聚合 |
 
 ## PLC 编程
