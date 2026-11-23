@@ -13,8 +13,9 @@ title: AI Skills
 ## 文件结构
 ```
 skills/
-├── prompt-xxxx.md    ← 按功能命名，如 prompt-plc-diagnose.md
-└── README.md         ← 本文件
+├── plc-diagnose.md         ← PLC 故障诊断
+├── prompt-xxxx.md          ← 其他技能按功能命名
+└── README.md               ← 本文件
 ```
 
 ## Skill 模板
@@ -47,4 +48,7 @@ title: 技能名
 ```
 
 ## 已存 Skills
-_暂无。添加 skill 后在此更新列表。_
+| Skill | 用途 | 说明 |
+|---|---|---|
+| [plc-diagnose](plc-diagnose.md) | PLC 故障诊断 | 分析故障代码、报警、现场现象 |
+| _暂无更多_ | | |
