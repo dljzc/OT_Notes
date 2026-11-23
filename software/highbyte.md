@@ -3,7 +3,7 @@ layout: default
 title: Highbyte
 ---
 
-# Highbyte
+# Highbyte 笔记
 
 ## 概述
 Highbyte 是工业数据平台，专注于边缘到云的连接、资产建模和数据管道，基于 Ignition 构建。

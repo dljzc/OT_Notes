@@ -3,7 +3,7 @@ layout: default
 title: Ignition
 ---
 
-# Ignition (Inductive Automation)
+# Ignition 笔记
 
 ## 概述
 Ignition 是开源授权的 SCADA/IIoT 平台，包含透视（Perspective）、边缘计算、MQTT 网关。

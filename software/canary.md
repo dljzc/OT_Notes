@@ -3,7 +3,7 @@ layout: default
 title: Canary
 ---
 
-# Canary
+# Canary 笔记
 
 ## 概述
 Canary 是工业数据枢纽平台，专注于工业数据集成和 MCP 服务，提供从 OT 到 IT 的连接。

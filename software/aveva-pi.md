@@ -3,7 +3,7 @@ layout: default
 title: AVEVA PI
 ---
 
-# AVEVA PI (OSIsoft PI)
+# AVEVA PI 笔记
 
 ## 概述
 AVEVA PI System 是工业数据 historian 平台，用于采集、存储和分析时间序列工业数据。

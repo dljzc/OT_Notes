@@ -3,7 +3,7 @@ layout: default
 title: Kapware
 ---
 
-# Kapware
+# Kapware 笔记
 
 ## 概述
 Kapware 是数据采集和边缘计算平台，支持多种工业协议，提供 OPC 服务器功能。
